@@ -26,6 +26,18 @@ public class Main {
             {
                 info(obj);
             }
+            else if(a==4)
+            {
+                cDocuments(obj);
+            }
+            else if(a==5)
+            {
+                map(obj);
+            }
+            else if(a==6)
+            {
+                infomap(obj);
+            }
         }
     }
 
@@ -57,7 +69,8 @@ public class Main {
         System.out.println("Car brand: ");
         String brand=lt.nextLine();
         System.out.println("Car model: ");
-        String model=lt.nextLine();
+        int model=lt.nextInt();
+        lt.nextLine();
         System.out.println("Cylinder capacity: ");
         double cylinder=lt.nextDouble();
         lt.nextLine();;
@@ -80,9 +93,10 @@ public class Main {
         String plate=lt.nextLine();
         
         System.out.println("Is a: 1.car / 2.motorcycle");
-        int ans=lt.nextInt();
+        int answ=lt.nextInt();
         lt.nextLine();
-        if(ans==1)
+
+        if(answ==1)
         {
             System.out.println("Type of car 1.sedan 2.pickuptruck: ");
             int typeC=lt.nextInt();
@@ -114,44 +128,49 @@ public class Main {
                 lt.nextLine();
                 double consumeg=capacityg*(cylinder/150);
  
-                System.out.println("Regist documents 1.yes / 2.no");
-                int re=lt.nextInt();
-                double prid=0;
-                int year=0;
-                String image="";
-                double prid2=0;
-                int year2=0;
-                String image2="";
+                
+                
+                
+                System.out.println("SOAT:");
+                
+                System.out.println("Price: ");
+                double prid=lt.nextDouble();
+                lt.nextLine();
+                System.out.println("Year: ");
+                int year=lt.nextInt();
+                lt.nextLine();
+                System.out.println("Image");
+                String image=lt.nextLine();
+                
+                System.out.println("TECHNOMECHANIC:");
+                
+                System.out.println("Price: ");
+                double prid2=lt.nextDouble();
+                lt.nextLine();
+                System.out.println("Year: ");
+                int year2=lt.nextInt();
+                lt.nextLine();
+                System.out.println("Image");
+                String image2=lt.nextLine();
 
-                if(re==1)
+                double prid3=0;
+                int year3=0;
+                String image3="";
+                if(used==true)
                 {
-                    System.out.println("What documents you wanna regist: 1.SOAT / 2.Tehnomechanic");
-                    int doc=lt.nextInt();
-                    if(doc==1)
-                    {
-                    System.out.println("Price: ");
-                    prid=lt.nextDouble();
-                    lt.nextLine();
-                    System.out.println("Year: ");
-                    year=lt.nextInt();
-                    lt.nextLine();
-                    System.out.println("Image");
-                    image=lt.nextLine();
-                    }
-                    else if(doc==2)
-                    {
-                    System.out.println("Price: ");
-                    prid2=lt.nextDouble();
-                    lt.nextLine();
-                    System.out.println("Year: ");
-                    year2=lt.nextInt();
-                    lt.nextLine();
-                    System.out.println("Image");
-                    image2=lt.nextLine();
-                    }
-                    
+                System.out.println("OWNER CARD:");
+                
+                System.out.println("Price: ");
+                prid3=lt.nextDouble();
+                lt.nextLine();
+                System.out.println("Year: ");
+                year3=lt.nextInt();
+                lt.nextLine();
+                System.out.println("Image");
+                image3=lt.nextLine();
                 }
-                System.out.println(v.regVehicle(bprice,sprice,brand,model,cylinder,mileage,used,plate,capacityg,tipog,consumeg,typeC,doors,polarized,prid,year,image,matriz,prid2,year2,image2,tipoc));
+   
+                System.out.println(v.regVehicle(bprice,sprice,brand,model,cylinder,mileage,used,plate,capacityg,tipog,consumeg,typeC,doors,polarized,prid,year,image,matriz,prid2,year2,image2,prid3,year3,image3));
             }
             else if(tipoc==2)
             {
@@ -169,44 +188,47 @@ public class Main {
                 {
                     batteryc=(batteryd+18)*(cylinder/100);
                 }
-                System.out.println("Regist documents 1.yes / 2.no");
-                int re=lt.nextInt();
-                double prid=0;
-                int year=0;
-                String image="";
-                double prid2=0;
-                int year2=0;
-                String image2="";
+                
+                System.out.println("SOAT:");
+                
+                System.out.println("Price: ");
+                double prid=lt.nextDouble();
+                lt.nextLine();
+                System.out.println("Year: ");
+                int year=lt.nextInt();
+                lt.nextLine();
+                System.out.println("Image");
+                String image=lt.nextLine();
+                
+                System.out.println("TECHNOMECHANIC:");
+                
+                System.out.println("Price: ");
+                double prid2=lt.nextDouble();
+                lt.nextLine();
+                System.out.println("Year: ");
+                int year2=lt.nextInt();
+                lt.nextLine();
+                System.out.println("Image");
+                String image2=lt.nextLine();
 
-                if(re==1)
+                double prid3=0;
+                int year3=0;
+                String image3="";
+                if(used==true)
                 {
-                    System.out.println("What documents you wanna regist: 1.SOAT / 2.Tehnomechanic");
-                    int doc=lt.nextInt();
-                    if(doc==1)
-                    {
-                    System.out.println("Price: ");
-                    prid=lt.nextDouble();
-                    lt.nextLine();
-                    System.out.println("Year: ");
-                    year=lt.nextInt();
-                    lt.nextLine();
-                    System.out.println("Image");
-                    image=lt.nextLine();
-                    }
-                    else if(doc==2)
-                    {
-                    System.out.println("Price: ");
-                    prid2=lt.nextDouble();
-                    lt.nextLine();
-                    System.out.println("Year: ");
-                    year2=lt.nextInt();
-                    lt.nextLine();
-                    System.out.println("Image");
-                    image2=lt.nextLine();
-                    }
-                    
+                System.out.println("OWNER CARD:");
+                
+                System.out.println("Price: ");
+                prid3=lt.nextDouble();
+                lt.nextLine();
+                System.out.println("Year: ");
+                year3=lt.nextInt();
+                lt.nextLine();
+                System.out.println("Image");
+                image3=lt.nextLine();
                 }
-                System.out.println(v.regVehicle(bprice,sprice,brand,model,cylinder,mileage,used,plate,tipoch,batteryd,batteryc,typeC,doors,polarized,prid,year,image,matriz,prid2,year2,image2,tipoc));
+   
+                System.out.println(v.regVehicle(bprice,sprice,brand,model,cylinder,mileage,used,plate,tipoch,batteryd,batteryc,typeC,doors,polarized,prid,year,image,matriz,prid2,year2,image2,prid3,year3,image3));
                 
             }
             else if(tipoc==3)
@@ -231,95 +253,100 @@ public class Main {
                 {
                     batteryc=(batteryd+7)*(cylinder/200);
                 }
-                System.out.println("Regist documents 1.yes / 2.no");
-                int re=lt.nextInt();
-                double prid=0;
-                int year=0;
-                String image="";
-                double prid2=0;
-                int year2=0;
-                String image2="";
+                System.out.println("SOAT:");
+                
+                System.out.println("Price: ");
+                double prid=lt.nextDouble();
+                lt.nextLine();
+                System.out.println("Year: ");
+                int year=lt.nextInt();
+                lt.nextLine();
+                System.out.println("Image");
+                String image=lt.nextLine();
+                
+                System.out.println("TECHNOMECHANIC:");
+                
+                System.out.println("Price: ");
+                double prid2=lt.nextDouble();
+                lt.nextLine();
+                System.out.println("Year: ");
+                int year2=lt.nextInt();
+                lt.nextLine();
+                System.out.println("Image");
+                String image2=lt.nextLine();
 
-                if(re==1)
+                double prid3=0;
+                int year3=0;
+                String image3="";
+                if(used==true)
                 {
-                    System.out.println("What documents you wanna regist: 1.SOAT / 2.Tehnomechanic");
-                    int doc=lt.nextInt();
-                    if(doc==1)
-                    {
-                    System.out.println("Price: ");
-                    prid=lt.nextDouble();
-                    lt.nextLine();
-                    System.out.println("Year: ");
-                    year=lt.nextInt();
-                    lt.nextLine();
-                    System.out.println("Image");
-                    image=lt.nextLine();
-                    }
-                    else if(doc==2)
-                    {
-                    System.out.println("Price: ");
-                    prid2=lt.nextDouble();
-                    lt.nextLine();
-                    System.out.println("Year: ");
-                    year2=lt.nextInt();
-                    lt.nextLine();
-                    System.out.println("Image");
-                    image2=lt.nextLine();
-                    }
-                    
+                System.out.println("OWNER CARD:");
+                
+                System.out.println("Price: ");
+                prid3=lt.nextDouble();
+                lt.nextLine();
+                System.out.println("Year: ");
+                year3=lt.nextInt();
+                lt.nextLine();
+                System.out.println("Image");
+                image3=lt.nextLine();
                 }
-                System.out.println(v.regVehicle(bprice,sprice,brand,model,cylinder,mileage,used,plate,capacityg,tipog,consumeg,typeC,doors,polarized,tipoch,batteryd,batteryc,prid,year,image,matriz,prid2,year2,image2,tipoc));
-
+                System.out.println(v.regVehicle(bprice,sprice,brand,model,cylinder,mileage,used,plate,capacityg,tipog,consumeg,typeC,doors,polarized,tipoch,batteryd,batteryc,prid,year,image,matriz,prid2,year2,image2,prid3,year3,image3));
+            }
         }
-        else if(ans==2)
+        else if(answ==2)
         {
             System.out.println("Type of motorcycle: 1.standar / 2.sport / 3.scooter / 4.cross");
             int motrocyclet=lt.nextInt();
+            lt.nextLine();
             System.out.println("Capacity of gasoline: ");
             double capacityg=lt.nextDouble();
             double consumeg=capacityg*(cylinder/75);
-            System.out.println("Regist documents 1.yes / 2.no");
-                int re=lt.nextInt();
-                double prid=0;
-                int year=0;
-                String image="";
-                double prid2=0;
-                int year2=0;
-                String image2="";
+            System.out.println("SOAT:");
+                
+                System.out.println("Price: ");
+                double prid=lt.nextDouble();
+                lt.nextLine();
+                System.out.println("Year: ");
+                int year=lt.nextInt();
+                lt.nextLine();
+                System.out.println("Image");
+                String image=lt.nextLine();
+                
+                System.out.println("TECHNOMECHANIC:");
+                
+                System.out.println("Price: ");
+                double prid2=lt.nextDouble();
+                lt.nextLine();
+                System.out.println("Year: ");
+                int year2=lt.nextInt();
+                lt.nextLine();
+                System.out.println("Image");
+                String image2=lt.nextLine();
 
-                if(re==1)
+                double prid3=0;
+                int year3=0;
+                String image3="";
+                if(used==true)
                 {
-                    System.out.println("What documents you wanna regist: 1.SOAT / 2.Tehnomechanic");
-                    int doc=lt.nextInt();
-                    if(doc==1)
-                    {
-                    System.out.println("Price: ");
-                    prid=lt.nextDouble();
-                    lt.nextLine();
-                    System.out.println("Year: ");
-                    year=lt.nextInt();
-                    lt.nextLine();
-                    System.out.println("Image");
-                    image=lt.nextLine();
-                    }
-                    else if(doc==2)
-                    {
-                    System.out.println("Price: ");
-                    prid2=lt.nextDouble();
-                    lt.nextLine();
-                    System.out.println("Year: ");
-                    year2=lt.nextInt();
-                    lt.nextLine();
-                    System.out.println("Image");
-                    image2=lt.nextLine();
-                    }
-                    
+                System.out.println("OWNER CARD:");
+                
+                System.out.println("Price: ");
+                prid3=lt.nextDouble();
+                lt.nextLine();
+                System.out.println("Year: ");
+                year3=lt.nextInt();
+                lt.nextLine();
+                System.out.println("Image");
+                image3=lt.nextLine();
                 }
-            System.out.println(v.regVehicle(bprice,sprice,brand,model,cylinder,mileage,used,plate,motrocyclet,capacityg,consumeg,prid,year,image,matriz,prid2,year2,image2));
+   
+            System.out.println(v.regVehicle(bprice,sprice,brand,model,cylinder,mileage,used,plate,motrocyclet,capacityg,consumeg,prid,year,image,matriz,prid2,year2,image2,prid3,year3,image3));
         }
     }
         
-    }
+        
+    
     
     public static void totalprice(Company v)
     {
@@ -331,5 +358,22 @@ public class Main {
     public static void info(Company v)
     {
         System.out.println(v.infoV());
+    }
+    
+    public static void cDocuments(Company v)
+    {
+        System.out.println("plate of the vehicle: ");
+        String pl=lt.nextLine();
+        System.out.println(v.cDocuments(pl));
+    }
+
+    public static void map(Company v)
+    {
+        System.out.println(v.map());
+    }
+
+    public static void infomap(Company v)
+    {
+        System.out.println(v.infomap());
     }
 }

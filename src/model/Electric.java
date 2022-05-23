@@ -6,8 +6,8 @@ public class Electric extends Car {
     private double batteryConsume;
 
 
-    public Electric(boolean alreadyUsed, double basePrice, double sellPrice, String brand, String model, double cylinderCapacity, double kilometers, String licensePlate, int typeC, int doors, boolean polarized, double batteryd, double batteryc, int typech, double prid, int year, String image, int[][]matriz,double prid2, int year2, String image2,int tipoc) {
-        super(alreadyUsed,basePrice,sellPrice,brand,model,cylinderCapacity,kilometers,licensePlate,typeC,doors,polarized,prid,year,image,matriz,prid2,year2,image2,tipoc);
+    public Electric(boolean alreadyUsed, double basePrice, double sellPrice, String brand, int model, double cylinderCapacity, double kilometers, String licensePlate, int typeC, int doors, boolean polarized, double batteryd, double batteryc, int typech, double prid, int year, String image, int[][]matriz,double prid2, int year2, String image2, double prid3, int year3, String image3) {
+        super(alreadyUsed,basePrice,sellPrice,brand,model,cylinderCapacity,kilometers,licensePlate,typeC,doors,polarized,prid,year,image,matriz,prid2,year2,image2,prid3,year3,image3);
         this.batteryDuration = batteryDuration;
         this.batteryConsume = batteryConsume;
         switch(typech)

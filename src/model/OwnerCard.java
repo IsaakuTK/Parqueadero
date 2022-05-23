@@ -11,7 +11,7 @@ public class OwnerCard extends Document{
 
     public String generateCode(int [][] matriz){
         String message="";
-        for (int i=matriz.length;i>=0;i--){
+        for (int i=matriz.length-1;i>=0;i--){
             for (int j=matriz.length-1;j>=0;j--){
                 if((i+j)%2==0){
                     message+=matriz[i][j];

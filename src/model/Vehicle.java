@@ -6,14 +6,13 @@ public abstract class Vehicle {
     private double basePrice;
     private double sellPrice;
     private String brand;
-    private String model;
+    private int model;
     private double cilinderCapacity;
     private double kilometers;
     private String licensePlate;
     private ArrayList <Document> documents;
-    private int tipoc;
 
-    public Vehicle(boolean alreadyUsed, double basePrice, double sellPrice, String brand, String model, double cilinderCapacity, double kilometers, String licensePlate, double prid, int year, String image,int[][]matriz,double prid2, int year2, String image2, int tipoc) {
+    public Vehicle(boolean alreadyUsed, double basePrice, double sellPrice, String brand, int model, double cilinderCapacity, double kilometers, String licensePlate, double prid, int year, String image,int[][]matriz,double prid2, int year2, String image2,double prid3, int year3, String image3) {
         this.alreadyUsed = alreadyUsed;
         this.basePrice = basePrice;
         this.sellPrice = sellPrice;
@@ -22,13 +21,46 @@ public abstract class Vehicle {
         this.cilinderCapacity = cilinderCapacity;
         this.kilometers = kilometers;
         this.licensePlate = licensePlate;
-        this.tipoc=tipoc;
         documents = new ArrayList <Document> ();
         documents.add(new Soat(prid,year,image,matriz));
         documents.add(new Technomechanics(prid2,year2,image2,matriz));
-        //documents.add(new OwnerCard(prid,year,image,matriz));
+        documents.add(new OwnerCard(prid3,year3,image3,matriz));
     }
 
+    public String documents() {
+        String m="\n";
+        for(int i=0; i<documents.size(); i++)
+        {
+            if(documents.get(i)instanceof Soat){
+                m+="\nSoat: ";
+                Soat obj1=(Soat) documents.get(i);
+                if(obj1!=null)
+                {
+                    m+="\n"+obj1.getCode();
+                }
+            }
+
+            if(documents.get(i)instanceof Technomechanics){
+                m+="\nTechnomechanic: ";
+                Technomechanics obj1=(Technomechanics) documents.get(i);
+                if(obj1!=null)
+                {
+                    m+="\n"+obj1.getCode();
+                }
+            }
+
+            if(documents.get(i)instanceof OwnerCard){
+                m+="\nOwner Card:";
+                OwnerCard obj1=(OwnerCard) documents.get(i);
+                if(obj1!=null)
+                {
+                    m+="\n"+obj1.getCode();
+                }
+            }
+        }
+            
+        return m;
+    }
 
     public boolean isAlreadyUsed() {
         return this.alreadyUsed;
@@ -66,11 +98,11 @@ public abstract class Vehicle {
         this.brand = brand;
     }
 
-    public String getModel() {
+    public int getModel() {
         return this.model;
     }
 
-    public void setModel(String model) {
+    public void setModel(int model) {
         this.model = model;
     }
 
@@ -104,14 +136,6 @@ public abstract class Vehicle {
 
     public void setDocuments(ArrayList<Document> documents) {
         this.documents = documents;
-    }
-
-    public int getTipoc() {
-        return this.tipoc;
-    }
-
-    public void setTipoc(int tipoc) {
-        this.tipoc = tipoc;
     }
 
     
